@@ -41,3 +41,6 @@ export default async function BlogPage() {
     </main>
   )
 }
+
+export const runtime = 'edge'
+export const preferredRegion = 'auto'

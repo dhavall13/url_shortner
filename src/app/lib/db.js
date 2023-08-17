@@ -9,6 +9,3 @@ export async function helloWorld() {
   //   return { dbNow: dbNow, latency: Math.abs(end - start) }
   return { dbNow: dbNow, latency: Math.abs(end - start) }
 }
-
-export const runtime = 'edge'
-export const preferredRegion = 'auto'
