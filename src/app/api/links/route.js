@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import isValidURL from '@/app/lib/isValidURL'
+import { addLink } from '@/app/lib/db'
 
 export async function POST(request) {
   // Using  standard html form
@@ -24,5 +25,6 @@ export async function POST(request) {
       { status: 400 }
     )
   }
-  return NextResponse.json(data, { status: 201 })
+  const dbResponse = await addLink(url)
+  return NextResponse.json(dbResponse, { status: 201 })
 }
